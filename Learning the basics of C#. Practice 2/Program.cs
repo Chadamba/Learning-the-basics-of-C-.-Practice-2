@@ -2,8 +2,10 @@
 {
     private static void Main(string[] args)
     {
+
         Console.Write("Введите число = ");
         double @base = double.Parse(Console.ReadLine());
+
         Console.Write("Введите степень = ");
         double pow = double.Parse(Console.ReadLine());
 
