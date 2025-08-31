@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using System.Threading.Channels;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -182,4 +184,24 @@
         Console.WriteLine(numberElements);
         return numberElements;
     }
+
+    static int ChangingSign(int numberOfSignChanges)
+    {
+        int current = Convert.ToInt32(Console.ReadLine());
+        int previous = current;
+        int count = 0;
+        while (current != 0)
+        {
+            current = Convert.ToInt32(Console.ReadLine());
+            if (current * previous < 0)
+            {
+                count++;
+            }
+            previous = current;
+        }
+
+        Console.WriteLine(count);
+        return numberOfSignChanges;
+    }
+
 }
