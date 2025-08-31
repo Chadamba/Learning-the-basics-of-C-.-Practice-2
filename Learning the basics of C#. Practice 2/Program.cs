@@ -28,10 +28,13 @@
         int result = Months(number);
 
         int sum = 0;
-        int result = EvenAndNotDivisibleThree(sum);*/
+        int result = EvenAndNotDivisibleThree(sum);
 
         int difference = 0;
         int result = Difference(difference);
+
+        double arithmeticMean = 0;
+        double result = AverageValueOfSequence(arithmeticMean);*/
     }
 
     static double Power(double @base, double pow)
@@ -137,5 +140,22 @@
         difference = sumPositiveOnes - sumNegativeOnes;
         Console.WriteLine(difference);
         return difference;
+    }
+
+    static double AverageValueOfSequence(double arithmeticMean)
+    {
+        double number = double.Parse(Console.ReadLine());
+        double sum = 0;
+        double quantity = 0;
+   
+        while (number != 0)
+        {
+            sum += number;
+            quantity++;
+            number = double.Parse(Console.ReadLine());
+        }
+        arithmeticMean = sum/quantity;
+        Console.WriteLine(arithmeticMean);
+        return arithmeticMean;
     }
 }
