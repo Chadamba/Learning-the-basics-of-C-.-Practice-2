@@ -21,12 +21,14 @@
         var ageDictionary = new Dictionary<string, int>();
         ageDictionary.Add(name, age);
         ageDictionary.Keys.ToArray();
-        Console.WriteLine(name + " " + ageDictionary[name]);*/
+        Console.WriteLine(name + " " + ageDictionary[name]);
 
         Console.WriteLine("Введите число месяца = ");
         int number = int.Parse(Console.ReadLine());
         int result = Months(number);
 
+        int sum = 0;
+        int result = EvenAndNotDivisibleThree(sum);*/
     }
 
     static double Power(double @base, double pow)
@@ -82,5 +84,27 @@
                 break;
         }
         return number;
+    }
+
+    static int EvenAndNotDivisibleThree(int sum)
+    {
+        int number = int.Parse(Console.ReadLine());
+        sum = 0;
+
+        while (number != 0)
+        {
+            if (number % 2 == 0 && number % 3 != 0)
+            {
+                sum = sum + number;
+                number = int.Parse(Console.ReadLine());
+            }
+            else
+            {
+                number = int.Parse(Console.ReadLine());
+            }
+
+        }
+        Console.WriteLine(sum);
+        return sum;
     }
 }
