@@ -34,7 +34,10 @@
         int result = Difference(difference);
 
         double arithmeticMean = 0;
-        double result = AverageValueOfSequence(arithmeticMean);*/
+        double result = AverageValueOfSequence(arithmeticMean);
+
+        int numberElements = 0;
+        int result = MoreThanPreviousOne(numberElements);*/
     }
 
     static double Power(double @base, double pow)
@@ -157,5 +160,26 @@
         arithmeticMean = sum/quantity;
         Console.WriteLine(arithmeticMean);
         return arithmeticMean;
+    }
+
+    static int MoreThanPreviousOne(int numberElements)
+    {
+        int number = int.Parse(Console.ReadLine());
+        numberElements = 0;
+
+        while (number != 0)
+        {
+            
+            int numberTwo = int.Parse(Console.ReadLine());
+
+            if (numberTwo > number)
+            {
+                numberElements++;
+            }
+            number = numberTwo;
+        }
+        
+        Console.WriteLine(numberElements);
+        return numberElements;
     }
 }
