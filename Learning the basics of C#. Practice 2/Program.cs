@@ -29,6 +29,9 @@
 
         int sum = 0;
         int result = EvenAndNotDivisibleThree(sum);*/
+
+        int difference = 0;
+        int result = Difference(difference);
     }
 
     static double Power(double @base, double pow)
@@ -106,5 +109,33 @@
         }
         Console.WriteLine(sum);
         return sum;
+    }
+
+    static int Difference(int difference)
+    {
+        int number = int.Parse(Console.ReadLine());
+        int sumPositiveOnes = 0;
+        int sumNegativeOnes = 0;
+
+
+        while (number != 0)
+        {
+            if (number > 0)
+            {
+                sumPositiveOnes++;
+                number = int.Parse(Console.ReadLine());
+
+            }
+            else if (number < 0)
+            {
+                sumNegativeOnes++;
+                number = int.Parse(Console.ReadLine());
+
+            }
+
+        }
+        difference = sumPositiveOnes - sumNegativeOnes;
+        Console.WriteLine(difference);
+        return difference;
     }
 }
